@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins&family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Montserrat&d&family=Open+Sans:wght@600&display=swap");
+
+:root {
+  /* Fonts */
+  --MFont: "Merriweather";
+  --Roboto: "Roboto";
+  --Poppins: "Poppins";
+  --Anton: "Anton";
+  --Abril: "Abril Fatface";
+  --montserrat: "Montserrat";
+  --open-sans: "Open Sans";
+  /* Colors */
+  --cerulean-darker: #014052;
+  --cerulean-dark: #017a9b;
+  --cerulean: #02b3e4;
+  --cerulean-light: #53cbed;
+  --cerulean-lighter: #a4e4f5;
+
+  /* font-size: 14px; */
+}

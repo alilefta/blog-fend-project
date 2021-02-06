@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GoBabil is a platform for sharing ideas in all fields of technology industry">
+    <link rel="stylesheet" href="css/blog-post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <title>GoBabil Blog - always ideal ideas</title>
+</head>
+
+<body>
+    <header id="header">
+        <section class="logo header--item--1">
+            <h1><a href="#">GoBabil</a></h1>
+        </section>
+        <a class="search" href="#"><i class="fas fa-search"></i></a>
+        <a href="#" class="subscribe">Subscribe</a>
+        <!-- <nav class="header--item--2">
+                <ul class="nav--list">
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    <li><a href="#">Write</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">OurStory</a></li>
+                </ul>
+            </nav> -->
+    </header>
+    <main id='main--post'>
+        <section class="main--article">
+            <h1>Why you should never use ‘npm install’ in your CI/CD pipelines</h1>
+            <h6>January 1, 2021 by <a href="#">Ali</a></h6>
+            <div class="description">
+                <p class="bordered--bottom">When starting a new project or cloning an existing one most people run npm install or the shorthand version npm i which
+                is fine. But most likely you have already stumbled over a similar command called npm ci.
+                </p>
+                <p>Often I still see the npm install command in regular CI/CD pipelines. What sounds fine at first can lead to quite some
+                problems. The ci in the npm ci commands stand for “clean install” or if it helps you, you can also use “continuous
+                integration”. So it's quite clear that it should be used in favor of npm install in your pipelines. But let's quickly
+                check what the differences are before you blindly follow my advice and use npm ci in all of your pipelines.</p>
+                <p class="bordered">
+                    Even though the following definitions aren’t 100% aligned with the official <strong>NPM</strong> documentation I try to explain them in
+                    super simple terms containing the most common use cases.
+                </p>
+            </div>
+            <div class="heading">
+                <h1>npm install</h1>
+                <p>It’s being used for adding dependencies to your package.json and package-lock.json, thus modifying your dependencies and
+                installing them on your machine. This is absolutely fine for development but it should for no reason ever happen in your
+                pipelines. You don’t want to add/modify any files in your pipelines.</p>
+            </div>
+            <div class="sub-heading">
+                <h2>npm ci</h2>
+                <pre>
+                  <code>
+                    p { color: red; }
+                    body { background-color: #eee; }
+                  </code>
+                </pre>
+                <p>This command relies solely on the dependency definitions, which are listed in the package.json and package-lock.json,
+                and installs them. BUT it doesn’t do any modifications to your files. Also if the definitions in your two JSON files
+                aren’t 100% aligned with each other this command throws an error which also means that a lock file has to exist. So make
+                always sure that you add it to your VCS. Besides that, it does a “clean install”, like the name suggests, which means
+                that any existing node_modules folder is being deleted.
+                Okay, but why is this important?
+                Actually, it's pretty simple. Whenever you start your CI/CD pipelines you don’t want to have any inconsistency due to
+                non-matching package*.json files which might result in a different codebase than your local one. Also, you don’t want to
+                have any side effects which could appear when you are using an already populated node_modules folder.
+            </p>
+            </div>
+            <div class="summerize">
+                <h4>So just to summarize:</h4>
+                <ul class="sumerize">
+                    <li>Use npm install when you are working on your local machine and want to install/add/modify dependencies.</li>
+                    <li>Use npm ci when you are running on a CI/CD pipeline and want to provide consistency with reproducible steps.</li>
+                </ul>
+                <p>Here is a list of some NPM CLI tricks that will allow you to speed up JavaScript development using NPM, no matter what
+                project you’re working on.</p>
+                <ol>
+                    <li>Some NPM CLI shorthands</li>
+                    <li>Get the path to the specified package</li>
+                    <li>To see a package registry information</li>
+                    <li>Open an application’s homepage</li>
+                    <li>Open a package’s homepage</li>
+                    <li>List available npm scripts</li>
+                    <li>Get a list of globally installed packages</li>
+                    <li>Get a list of installed packages in an application</li>
+                    <li>npm link to work on an app and a dependency simultaneously</li>
+                    <li>Check outdated dependencies</li>
+                    <li><em>npx</em> to run locally-install executables</li>
+                    <li>To remove devDependencies</li>
+                </ol>
+            </div>
+        </section>
+        <aside>
+            <div class="about">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quisquam hic architecto quasi aperiam! Nihil repellendus rerum veritatis 
+                    illum autem perferendis culpa aut,
+                </p>
+            </div>
+            <div class="archives">
+                <h3>Archives</h3>
+                <ul class="archives--list">
+                    <li><a href="#">March 2020</a></li>
+                    <li><a href="#">February 2020</a></li>
+                    <li><a href="#">January 2020</a></li>
+                    <li><a href="#">December 2019</a></li>
+                    <li><a href="#">November 2019</a></li>
+                    <li><a href="#">Octobar 2019</a></li>
+                    <li><a href="#">September 2019</a></li>
+                    <li><a href="#">August 2019</a></li>
+                    <li><a href="#">July 2019</a></li>
+                    <li><a href="#">June 2019</a></li>
+                </ul>
+            </div>
+            <div class="social--following">
+                <h3>Elsewhere</h3>
+                <ul>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="tags">
+                <h3>Tags</h3>
+                <ul>
+                    <li><a href="#">#Tech</a></li>
+                    <li><a href="#">#NPM</a></li>
+                    <li><a href="#">#Coding</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <section class="nav--btns">
+        <a href="#" class="older">Older Post</a>
+        <a href="#" class="newer">Newer Post</a>
+    </section>
+    <footer>
+        <div>
+            <nav class="footer--nav">
+                <ul class="nav--links">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+                <ul class="nav--social">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <form>
+            <label for="email">Subscribe for our newsletter</label>
+            <input type="email" placeholder="example@example.com" name="email" required>
+            <button type="submit" class="submit">Subscribe</button>
+        </form>
+    </footer>
+</body>
+
+</html>

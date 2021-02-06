@@ -1,0 +1,168 @@
+@import "/css/typography.css";
+@import "/css/blog-post.css";
+@import "/css/header.css";
+@import "/css/footer.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: calc(100vw - 5%);
+  min-height: 100vh;
+  /* height: auto; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px auto 100px;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  /* grid-gap: 5px; */
+  padding: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#main {
+  width: 90%;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  /* grid-auto-flow: column; */
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+  margin: auto;
+}
+
+#main article {
+  min-height: 200px;
+  height: 250px;
+  padding: 2rem;
+  border: 7px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#main article .upper--section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, 400px) auto;
+}
+
+#main article .left--section {
+  /* height: 80%; */
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* align-items: center; */
+  align-items: flex-start;
+  width: 100%;
+}
+
+#main article .right--section {
+  /* align-items: flex-end; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  /* width: 100px; */
+  margin: auto;
+}
+
+#main article .right--section .post--img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+#main article.post--item--1 .post--img {
+  background-image: url("https://miro.medium.com/fit/c/250/166/0*Z89eo50_5JkE2JJB");
+}
+#main article.post--item--2 .upper--section .right--section .post--img {
+  background-image: url("https://sm.mashable.com/t/mashable_me/news/s/spacex-sen/spacex-sends-more-than-100-satellites-skyward-in-a-dazzling_e41v.960.png");
+}
+#main article.post--item--3 .post--img {
+  background-image: url("https://miro.medium.com/fit/c/250/166/0*nZbLYiQk1cQnUn-K");
+}
+#main article.post--item--4 .post--img {
+  background-image: url("https://miro.medium.com/fit/c/250/166/1*IRhKSuSu1wSs6WtdY7CSCw.jpeg");
+}
+#main article.post--item--5 .post--img {
+  background-image: url("https://miro.medium.com/fit/c/250/166/0*27j5O6FSbZB11Ki_");
+}
+#main article.post--item--6 .post--img {
+  background-image: url("https://miro.medium.com/fit/c/250/166/1*SbYdWhMeHQYX89AICDLgWQ.jpeg");
+}
+
+#main article h2 {
+  font-family: var(--Poppins);
+  font-weight: 600;
+  font-size: 1rem;
+}
+article p:not(.date) {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+article h6 {
+  font-size: 0.9rem;
+  font-family: var(--montserrat);
+  font-weight: 600;
+}
+article h6.blue {
+  color: rgb(82 110 247);
+}
+
+article h6.green {
+  color: green;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  /* main {
+    width: 100%;
+    padding: 0;
+  } */
+}
+
+@media screen and (min-width: 901px) {
+  #main {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.9rem;
+    padding: 2rem;
+  }
+
+  .post--item--1 {
+    order: 0;
+  }
+
+  .post--item--2 {
+    order: 2;
+  }
+
+  .post--item--3 {
+    order: 4;
+  }
+
+  .post--item--4 {
+    order: 1;
+  }
+
+  .post--item--5 {
+    order: 3;
+  }
+
+  .post--item--6 {
+    order: 5;
+  }
+}

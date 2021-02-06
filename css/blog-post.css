@@ -1,0 +1,222 @@
+@import "/css/typography.css";
+@import "/css/header.css";
+@import "/css/footer.css";
+
+body {
+  min-height: 100vh;
+}
+
+main#main--post {
+  padding: 0 1rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: auto;
+}
+
+main .main--article {
+  width: 90%;
+}
+
+main .main--article .description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1rem;
+}
+
+main .main--article .heading h1 {
+  font-family: var(--open-sans);
+}
+main .main--article .heading p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1rem;
+}
+
+main .main--article .sub-heading p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1rem;
+}
+
+main .main--article .sub-heading pre code {
+  background-color: #f1f1f1;
+  border: 1px solid #e7e7e7;
+  display: block;
+  padding: 20px;
+  color: var(--cerulean-darker);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+main .main--article .sub-heading h2 {
+  font-family: var(--open-sans);
+  color: var(--cerulean-darker);
+}
+
+main .main--article .summerize {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1rem;
+}
+
+main .main--article .description .bordered--bottom {
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+main .main--article h1 {
+  font-family: var(--Roboto);
+  font-size: 1.8rem;
+  color: var(--cerulean-darker);
+}
+
+main .main--article h6 {
+  font-size: 1rem;
+  color: rgb(211, 211, 211);
+  margin: 0;
+  font-family: var(--MFont);
+}
+
+main .main--article h6 a {
+  color: var(--cerulean-light);
+}
+
+main#main--post aside {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-family: var(--open-sans);
+}
+
+main#main--post aside .archives--list,
+.social--following ul,
+.tags ul {
+  list-style-type: none;
+}
+
+main#main--post aside .archives {
+  display: flex;
+  justify-self: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 0.9rem 1rem; */
+  /* margin: 0 1rem 0 0; */
+}
+
+main#main--post aside .archives h3 {
+  margin: 1rem 0 0 0;
+}
+
+main#main--post aside .archives .archives--list {
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+main#main--post aside .archives .archives--list li a {
+  color: var(--cerulean-light);
+}
+
+main#main--post aside .social--following ul {
+  padding: 0;
+  font-size: 0.9rem;
+  font-family: var(--MFont);
+}
+
+main#main--post aside .social--following ul li a {
+  color: var(--cerulean-light);
+}
+
+main#main--post aside .tags ul {
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+main#main--post aside .social--following h3 {
+  color: var(--cerulean-darker);
+}
+
+main#main--post aside .archives h3 {
+  color: var(--cerulean-darker);
+}
+
+main#main--post aside .tags h3 {
+  color: var(--cerulean-darker);
+}
+
+main#main--post aside .tags ul li a {
+  color: var(--cerulean-light);
+}
+
+main#main--post aside .about {
+  width: 90%;
+  background-color: #f1f1f1;
+  padding: 0.4rem 0.8rem;
+}
+
+main#main--post aside .about h3 {
+  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+main#main--post aside .about p {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+main#main--post .bordered {
+  border: 2px solid #e7e7e7;
+  padding: 0.5rem;
+}
+
+.nav--btns {
+  padding: 1.6rem 4rem;
+}
+
+.nav--btns .older {
+  background-color: #fff;
+  border: 2px solid var(--cerulean-light);
+  color: var(--cerulean-light);
+  border-radius: 50px;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+}
+
+.nav--btns .older:hover {
+  background-color: var(--cerulean-light);
+  color: #ffffff;
+  transition: 0.2s linear background-color;
+}
+.nav--btns .newer {
+  background-color: #fff;
+  border: 2px solid rgb(224, 224, 224);
+  color: rgb(224, 224, 224);
+  border-radius: 50px;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  /* main {
+    width: 100%;
+    padding: 0;
+  } */
+}
+
+@media screen and (min-width: 901px) {
+  main#main--post {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 15px;
+  }
+  #main--post aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 290px 200px 120px 150px;
+  }
+  aside div {
+    width: 100%;
+  }
+}
