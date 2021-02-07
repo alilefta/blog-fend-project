@@ -26,21 +26,30 @@
                 </ul>
             </nav> -->
     </header>
+    <nav id="back--home--btn"><a href="index.html"><i class="fas fa-long-arrow-alt-left"></i> Back Home</a></nav>
+    <section class="author--info">
+        
+    </section>
     <main id='main--post'>
         <section class="main--article">
             <h1>Why you should never use ‘npm install’ in your CI/CD pipelines</h1>
             <h6>January 1, 2021 by <a href="#">Ali</a></h6>
+            <figure>
+                <img src="https://miro.medium.com/max/3000/0*27j5O6FSbZB11Ki_" alt="Photo by Cookie the Pom on Unsplash">
+                <figcaption>Photo by <a href="https://unsplash.com/@cookiethepom">Cookie the Pom</a> on <a href="https://unsplash.com/">Unsplash</a></figcaption>
+            </figure>
             <div class="description">
                 <p class="bordered--bottom">When starting a new project or cloning an existing one most people run npm install or the shorthand version npm i which
                 is fine. But most likely you have already stumbled over a similar command called npm ci.
                 </p>
-                <p>Often I still see the npm install command in regular CI/CD pipelines. What sounds fine at first can lead to quite some
+                <p>Often I still see the npm install command in regular <u>CI/CD</u> pipelines. What sounds fine at first can lead to quite some
                 problems. The ci in the npm ci commands stand for “clean install” or if it helps you, you can also use “continuous
                 integration”. So it's quite clear that it should be used in favor of npm install in your pipelines. But let's quickly
                 check what the differences are before you blindly follow my advice and use npm ci in all of your pipelines.</p>
-                <p class="bordered">
+                <blockquote class="bordered">
                     Even though the following definitions aren’t 100% aligned with the official <strong>NPM</strong> documentation I try to explain them in
                     super simple terms containing the most common use cases.
+                </blockquote>
                 </p>
             </div>
             <div class="heading">
@@ -93,43 +102,56 @@
             </div>
         </section>
         <aside>
-            <div class="about">
-                <h3>About</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quisquam hic architecto quasi aperiam! Nihil repellendus rerum veritatis 
-                    illum autem perferendis culpa aut,
-                </p>
+            <div class="author--info">
+                <div class="author">
+                    <div class="author--avatar">
+                    </div>
+                    <div class="author--details">
+                        <h4>Alex Gonzalez</h4>
+                        <h5>Senior Web Developer</h5>
+                        <h5>GoBabil Team</h5>
+                    </div>
+                </div>
+                <div class="about">
+                    <h3>About</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quisquam hic architecto quasi aperiam! Nihil repellendus rerum veritatis 
+                        illum autem perferendis culpa aut,
+                    </p>
+                </div>
             </div>
-            <div class="archives">
-                <h3>Archives</h3>
-                <ul class="archives--list">
-                    <li><a href="#">March 2020</a></li>
-                    <li><a href="#">February 2020</a></li>
-                    <li><a href="#">January 2020</a></li>
-                    <li><a href="#">December 2019</a></li>
-                    <li><a href="#">November 2019</a></li>
-                    <li><a href="#">Octobar 2019</a></li>
-                    <li><a href="#">September 2019</a></li>
-                    <li><a href="#">August 2019</a></li>
-                    <li><a href="#">July 2019</a></li>
-                    <li><a href="#">June 2019</a></li>
-                </ul>
-            </div>
-            <div class="social--following">
-                <h3>Elsewhere</h3>
-                <ul>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                </ul>
-            </div>
-            <div class="tags">
-                <h3>Tags</h3>
-                <ul>
-                    <li><a href="#">#Tech</a></li>
-                    <li><a href="#">#NPM</a></li>
-                    <li><a href="#">#Coding</a></li>
-                </ul>
+            <div class="aside--navigator">
+                <div class="archives">
+                    <h3>Archives</h3>
+                    <ul class="archives--list">
+                        <li><a href="#">March 2020</a></li>
+                        <li><a href="#">February 2020</a></li>
+                        <li><a href="#">January 2020</a></li>
+                        <li><a href="#">December 2019</a></li>
+                        <li><a href="#">November 2019</a></li>
+                        <li><a href="#">Octobar 2019</a></li>
+                        <li><a href="#">September 2019</a></li>
+                        <li><a href="#">August 2019</a></li>
+                        <li><a href="#">July 2019</a></li>
+                        <li><a href="#">June 2019</a></li>
+                    </ul>
+                </div>
+                <div class="social--following">
+                    <h3>Elsewhere</h3>
+                    <ul>
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        <li><a href="#">#Tech</a></li>
+                        <li><a href="#">#NPM</a></li>
+                        <li><a href="#">#Coding</a></li>
+                    </ul>
+                </div>
             </div>
         </aside>
     </main>

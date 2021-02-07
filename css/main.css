@@ -86,6 +86,14 @@ body {
   background-position: center;
 }
 
+#main article section.lower--section a {
+  color: var(--cerulean-darker);
+}
+
+#main article section.lower--section a:hover {
+  color: var(--cerulean-dark);
+}
+
 #main article.post--item--1 .post--img {
   background-image: url("https://miro.medium.com/fit/c/250/166/0*Z89eo50_5JkE2JJB");
 }
@@ -126,13 +134,6 @@ article h6.blue {
 
 article h6.green {
   color: green;
-}
-
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  /* main {
-    width: 100%;
-    padding: 0;
-  } */
 }
 
 @media screen and (min-width: 901px) {
